@@ -1,8 +1,12 @@
-export default function TodoListItem({ item }) {
+import React from 'react';
+
+const TodoListItem = ({ item, onToggle }) => {
     return (
-        <li>
-            <input type="checkbox" checked={item.completed} />
+        <div>
+            <input type="checkbox" checked={item.completed} onChange={() => onToggle(item.id)} />
             {item.title}
-        </li>
+        </div>
     )
 }
+
+export default TodoListItem;
