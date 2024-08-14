@@ -4,6 +4,7 @@ import TodoList from "@/components/Todo/TodoList"
 import TodoCreate from "@/components/Todo/TodoCreate"
 
 import "./page.css";
+import TodoCreateModal from "@/components/Todo/TodoCreateModal";
 
 export default function TodoPage() {
   const items = [
@@ -19,6 +20,8 @@ export default function TodoPage() {
         <TodoCreate />
       </div>
       <TodoList items={items} />
+
+      <TodoCreateModal />
     </main>
   )
 }
