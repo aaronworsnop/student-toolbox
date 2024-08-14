@@ -2,11 +2,12 @@ import React from "react"
 
 import "./TodoCreateModal.css";
 
-export default function TodoCreateModal({ onClose }) {
+export default function TodoCreateModal({ visible, onClose }) {
 
+    const modalVisible = { display: visible ? 'block' : 'none' };
 
     return (
-        <div id="todo-create-modal">
+        <div id="todo-create-modal" style={modalVisible}>
             <div className="title-bar">
                 <h1>Create New Todo Item</h1>
                 <button id="todo-create-modal-close-button" onClick={onClose}>X</button>

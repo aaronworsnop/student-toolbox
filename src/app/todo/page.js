@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react"
 import Title from "@/components/title"
 import TodoList from "@/components/Todo/TodoList"
@@ -13,15 +15,18 @@ export default function TodoPage() {
     { title: "Buy eggs", completed: false },
   ]
 
+  const [isModalVisible, setModalVisible] = React.useState(false);
+  const handleOpenModal = () => setModalVisible(true);
+
   return (
     <main>
       <div id="todo-bar">
         <Title text="To-do list" />
-        <TodoCreateButton />
+        <TodoCreateButton onOpen={handleOpenModal} />
       </div>
       <TodoList items={items} />
 
-      <TodoCreateModal />
+      <TodoCreateModal visible={isModalVisible} />
     </main>
   )
 }

@@ -1,11 +1,9 @@
 import React from 'react';
 
-export default function TodoCreateButton({ onCreate }) {
-    // An "add" "+" button that pops up another floating pane
-
+export default function TodoCreateButton({ onOpen }) {
     return (
         <div>
-            <button onClick={onCreate} style={{ padding: '10px' }}>+</button>
-        </div >
+            <button onClick={onOpen} style={{ padding: '10px' }}>+</button>
+        </div>
     );
 }
