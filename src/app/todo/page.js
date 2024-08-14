@@ -17,6 +17,7 @@ export default function TodoPage() {
 
   const [isModalVisible, setModalVisible] = React.useState(false);
   const handleOpenModal = () => setModalVisible(true);
+  const handleCloseModal = () => setModalVisible(false);
 
   return (
     <main>
@@ -26,7 +27,7 @@ export default function TodoPage() {
       </div>
       <TodoList items={items} />
 
-      <TodoCreateModal visible={isModalVisible} />
+      <TodoCreateModal onClose={handleCloseModal} visible={isModalVisible} />
     </main>
   )
 }
