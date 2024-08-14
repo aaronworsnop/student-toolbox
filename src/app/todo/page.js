@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react"
+import { useState } from "react"
 import Title from "@/components/title"
 import TodoList from "@/components/Todo/TodoList"
 import TodoCreateButton from "@/components/Todo/TodoCreateButton"
@@ -9,25 +10,32 @@ import "./page.css";
 import TodoCreateModal from "@/components/Todo/TodoCreateModal";
 
 export default function TodoPage() {
-  const items = [
-    { title: "Buy milk", completed: false },
-    { title: "Buy bread", completed: true },
-    { title: "Buy eggs", completed: false },
-  ]
+  const [items, setItems] = useState([]);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const [isModalVisible, setIsModalVisible] = React.useState(false);
   const handleOpenModal = () => setIsModalVisible(true);
   const handleCloseModal = () => setIsModalVisible(false);
+
+  const handleCreateTodo = (title, description) => {
+    const newTodo = {
+      id: items.length + 1,
+      title,
+      description,
+      completed: false,
+    };
+    setItems([...items, newTodo]);
+  };
+
 
   return (
     <main>
       <div id="todo-bar">
-        <Title text="To-do list" />
+        <Title text="Todo list" />
         <TodoCreateButton onOpen={handleOpenModal} />
       </div>
       <TodoList items={items} />
 
-      <TodoCreateModal onClose={handleCloseModal} visible={isModalVisible} />
+      <TodoCreateModal onClose={handleCloseModal} onCreate={handleCreateTodo} visible={isModalVisible} />
     </main>
   )
 }

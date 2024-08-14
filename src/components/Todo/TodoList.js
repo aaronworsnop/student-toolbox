@@ -1,17 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoListItem from "./TodoListItem";
-
 import PropTypes from "prop-types";
 
 export default function TodoList({ items }) {
-    // Rest of the code
-
     TodoList.propTypes = {
         items: PropTypes.array.isRequired,
     };
+
     const [todoItems, setTodoItems] = useState(items);
+
+    useEffect(() => {
+        setTodoItems(items);
+    }, [items]);
 
     const handleToggle = (id) => {
         const updatedItems = todoItems.map((item) =>

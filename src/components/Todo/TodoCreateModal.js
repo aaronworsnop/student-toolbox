@@ -1,16 +1,30 @@
 import React from "react"
-
+import { useState } from "react"
 import "./TodoCreateModal.css";
 
 import PropTypes from "prop-types";
 
-export default function TodoCreateModal({ visible, onClose }) {
+export default function TodoCreateModal({ visible, onClose, onCreate }) {
     TodoCreateModal.propTypes = {
         visible: PropTypes.bool.isRequired,
-        onClose: PropTypes.func.isRequired
+        onClose: PropTypes.func.isRequired,
+        onCreate: PropTypes.func.isRequired
     };
 
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+
     const modalVisible = { display: visible ? 'block' : 'none' };
+
+    const handleCreate = (event) => {
+        event.preventDefault();
+        if (title && description) {
+            onCreate(title, description);
+            setTitle("");
+            setDescription("");
+        }
+    };
+
 
     return (
         <div id="todo-create-modal" style={modalVisible}>
@@ -19,16 +33,28 @@ export default function TodoCreateModal({ visible, onClose }) {
                 <button id="todo-create-modal-close-button" onClick={onClose}>X</button>
             </div>
 
-            <div id="todo-create-modal-form">
+            <form id="todo-create-modal-form" onSubmit={handleCreate}>
                 <label>
-                    Title <input type="text" placeholder="Enter a title" />
+                    Title
+                    <input
+                        type="text"
+                        placeholder="Enter a title"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                    />
                 </label>
 
                 <label>
-                    Description <textarea placeholder="Enter a description" />
+                    Description
+                    <textarea
+                        placeholder="Enter a description"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                    />
                 </label>
-                <button>Create</button>
-            </div>
+
+                <button type="submit">Create</button>
+            </form>
         </div>
     );
 }
