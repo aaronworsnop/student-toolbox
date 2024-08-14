@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function TodoCreate({ onCreate }) {
+export default function TodoCreateButton({ onCreate }) {
     // An "add" "+" button that pops up another floating pane
 
     return (

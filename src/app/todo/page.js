@@ -1,7 +1,7 @@
 import React from "react"
 import Title from "@/components/title"
 import TodoList from "@/components/Todo/TodoList"
-import TodoCreate from "@/components/Todo/TodoCreate"
+import TodoCreateButton from "@/components/Todo/TodoCreateButton"
 
 import "./page.css";
 import TodoCreateModal from "@/components/Todo/TodoCreateModal";
@@ -17,7 +17,7 @@ export default function TodoPage() {
     <main>
       <div id="todo-bar">
         <Title text="To-do list" />
-        <TodoCreate />
+        <TodoCreateButton />
       </div>
       <TodoList items={items} />
 
