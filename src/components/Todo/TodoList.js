@@ -3,7 +3,14 @@
 import React, { useState } from "react";
 import TodoListItem from "./TodoListItem";
 
+import PropTypes from "prop-types";
+
 export default function TodoList({ items }) {
+    // Rest of the code
+
+    TodoList.propTypes = {
+        items: PropTypes.array.isRequired,
+    };
     const [todoItems, setTodoItems] = useState(items);
 
     const handleToggle = (id) => {
@@ -15,8 +22,8 @@ export default function TodoList({ items }) {
 
     return (
         <ul>
-            {todoItems.map((item, index) => (
-                <TodoListItem key={index} item={item} onToggle={handleToggle} />
+            {todoItems.map((item) => (
+                <TodoListItem key={item.id} item={item} onToggle={handleToggle} />
             ))}
         </ul>
     );
