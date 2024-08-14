@@ -15,9 +15,9 @@ export default function TodoPage() {
     { title: "Buy eggs", completed: false },
   ]
 
-  const [isModalVisible, setModalVisible] = React.useState(false);
-  const handleOpenModal = () => setModalVisible(true);
-  const handleCloseModal = () => setModalVisible(false);
+  const [isModalVisible, setIsModalVisible] = React.useState(false);
+  const handleOpenModal = () => setIsModalVisible(true);
+  const handleCloseModal = () => setIsModalVisible(false);
 
   return (
     <main>

@@ -2,7 +2,13 @@ import React from "react"
 
 import "./TodoCreateModal.css";
 
+import PropTypes from "prop-types";
+
 export default function TodoCreateModal({ visible, onClose }) {
+    TodoCreateModal.propTypes = {
+        visible: PropTypes.bool.isRequired,
+        onClose: PropTypes.func.isRequired
+    };
 
     const modalVisible = { display: visible ? 'block' : 'none' };
 
