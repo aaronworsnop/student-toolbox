@@ -26,7 +26,6 @@ export default function TodoPage() {
     setItems([...items, newTodo]);
   };
 
-
   return (
     <main>
       <div id="todo-bar">

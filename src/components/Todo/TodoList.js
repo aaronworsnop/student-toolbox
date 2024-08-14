@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import TodoListItem from "./TodoListItem";
 import PropTypes from "prop-types";
 
+import PropTypes from "prop-types";
+
 export default function TodoList({ items }) {
     TodoList.propTypes = {
         items: PropTypes.array.isRequired,
