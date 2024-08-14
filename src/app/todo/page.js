@@ -33,9 +33,10 @@ export default function TodoPage() {
         <Title text="Todo list" />
         <TodoCreateButton onOpen={handleOpenModal} />
       </div>
+      <p style={{ display: items.length == 0 ? 'block' : 'none' }}>Click on the '+' button to create a new Todo Item.</p>
       <TodoList items={items} />
 
       <TodoCreateModal onClose={handleCloseModal} onCreate={handleCreateTodo} visible={isModalVisible} />
-    </main>
+    </main >
   )
 }
