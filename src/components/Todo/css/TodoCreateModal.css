@@ -16,7 +16,8 @@
     border-radius: 8px;
 
     padding: 2rem;
-    background-color: #9BC4BC;
+    background-color: white;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 }
 
 #todo-create-modal label {
@@ -42,6 +43,10 @@ textarea {
     resize: none;
     overflow-y: auto;
     height: 5rem;
+}
+
+#todo-create-modal-create-button {
+    background-color: #8DDBE0;
 }
 
 #todo-create-modal-form {

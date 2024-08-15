@@ -50,7 +50,7 @@ export default function TodoCreateModal({ visible, onClose, onCreate }) {
                     />
                 </label>
 
-                <button type="submit">Create</button>
+                <button id="todo-create-modal-create-button" type="submit">Create</button>
             </form>
         </div>
     );

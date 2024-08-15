@@ -7,8 +7,6 @@ export default function TodoCreateButton({ onOpen }) {
     };
 
     return (
-        <div>
-            <button onClick={onOpen}>New Todo Item +</button>
-        </div>
+        <button onClick={onOpen}>New Todo Item +</button>
     );
 }
