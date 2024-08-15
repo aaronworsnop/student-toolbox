@@ -7,6 +7,8 @@ export default function TodoCreateButton({ onOpen }) {
     };
 
     return (
-        <button onClick={onOpen}>New Todo Item +</button>
+        <div>
+            <button onClick={onOpen} style={{ padding: '10px' }}>+</button>
+        </div>
     );
 }

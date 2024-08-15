@@ -1,5 +1,4 @@
 import React from 'react';
-import './css/TodoListItem.css';
 
 import PropTypes from 'prop-types';
 
@@ -9,12 +8,10 @@ const TodoListItem = ({ item, onToggle }) => {
         onToggle: PropTypes.func.isRequired
     };
 
-    const itemStrikethrough = item.completed ? 'todo-list-item-complete' : 'todo-list-item';
-
     return (
-        <div className={itemStrikethrough + ' todo-list-item'}>
-            {item.title}
+        <div>
             <input type="checkbox" checked={item.completed} onChange={() => onToggle(item.id)} />
+            {item.title}
         </div>
     )
 }
