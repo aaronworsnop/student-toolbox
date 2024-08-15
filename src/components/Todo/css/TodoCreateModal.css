@@ -32,9 +32,16 @@
 #todo-create-modal input,
 textarea {
     margin-top: 0.5rem;
+    padding: 0.5rem;
     font-weight: 400;
     font-family: inherit;
     font-size: 1rem;
+}
+
+#todo-create-modal textarea {
+    resize: none;
+    overflow-y: auto;
+    height: 5rem;
 }
 
 #todo-create-modal-form {
