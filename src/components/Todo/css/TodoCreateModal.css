@@ -23,11 +23,8 @@
     display: flex;
     flex-direction: column;
 
-    font-size: 1.2rem;
-}
-
-#todo-create-modal-close-button {
-    padding: 10px;
+    font-size: 1.8rem;
+    font-weight: 500;
 }
 
 #todo-create-modal-form {
