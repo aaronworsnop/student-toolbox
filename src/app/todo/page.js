@@ -34,7 +34,7 @@ export default function TodoPage() {
       <p style={{ display: items.length == 0 ? 'block' : 'none' }}>Click on the '+' button to create a new Todo Item.</p>
       <TodoList items={items} />
 
-      <TodoCreateModal onClose={handleCloseModal} onCreate={handleCreateTodo} visible={isModalVisible} />
+      <TodoCreateModal onClose={handleCloseModal} onCreate={handleCreateTodo} showing={isModalVisible} />
     </main >
   )
 }

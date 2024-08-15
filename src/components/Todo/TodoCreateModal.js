@@ -3,7 +3,7 @@ import "./css/TodoCreateModal.css";
 
 import PropTypes from "prop-types";
 
-export default function TodoCreateModal({ visible, onClose, onCreate }) {
+export default function TodoCreateModal({ showing, onClose, onCreate }) {
     TodoCreateModal.propTypes = {
         visible: PropTypes.bool.isRequired,
         onClose: PropTypes.func.isRequired,
@@ -13,7 +13,7 @@ export default function TodoCreateModal({ visible, onClose, onCreate }) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
 
-    const modalVisible = { display: visible ? 'block' : 'none' };
+    const modalVisible = { visibility: showing ? 'visible' : 'hidden', opacity: showing ? '1' : '0', scale: showing ? '1' : '0.95' };
 
     const handleCreate = (event) => {
         event.preventDefault();
