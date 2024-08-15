@@ -1,5 +1,4 @@
-import React from "react"
-import { useState } from "react"
+import { React, useState } from "react"
 import "./css/TodoCreateModal.css";
 
 import PropTypes from "prop-types";
@@ -35,8 +34,7 @@ export default function TodoCreateModal({ visible, onClose, onCreate }) {
 
             <form id="todo-create-modal-form" onSubmit={handleCreate}>
                 <label>
-                    Title
-                    <input
+                    Title<input
                         type="text"
                         placeholder="Enter a title"
                         value={title}
@@ -45,8 +43,7 @@ export default function TodoCreateModal({ visible, onClose, onCreate }) {
                 </label>
 
                 <label>
-                    Description
-                    <textarea
+                    Description<textarea
                         placeholder="Enter a description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
