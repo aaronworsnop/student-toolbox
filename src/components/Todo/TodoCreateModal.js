@@ -29,7 +29,7 @@ export default function TodoCreateModal({ visible, onClose, onCreate }) {
         <div id="todo-create-modal" style={modalVisible}>
             <div className="title-bar">
                 <h1>Create New Todo Item</h1>
-                <button id="todo-create-modal-close-button" onClick={onClose}>X</button>
+                <button id="todo-create-modal-close-button" onClick={onClose}>Close</button>
             </div>
 
             <form id="todo-create-modal-form" onSubmit={handleCreate}>
