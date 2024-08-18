@@ -3,6 +3,7 @@ import CalculatorHeader from "@/components/calculator/header";
 import "./calculator.css";
 import CourseList from "@/components/calculator/courseList";
 import { useState, useEffect } from "react";
+import Title from "@/components/title"
 
 export default function CalculatorPage() {
   const crypto = window.crypto || window.msCrypto;
@@ -71,6 +72,7 @@ export default function CalculatorPage() {
 
   return (
     <main>
+      <Title text="GPA Calculator" />
       <div>
         <CalculatorHeader
           onNewCourseInput={handleNewCourseInput}
