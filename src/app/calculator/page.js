@@ -71,7 +71,7 @@ export default function CalculatorPage() {
 
   return (
     <main>
-      <div className="gradeCalculator">
+      <div>
         <CalculatorHeader
           onNewCourseInput={handleNewCourseInput}
           onNewCourse={handleNewCourse}
