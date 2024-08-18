@@ -48,7 +48,7 @@ textarea {
 }
 
 #todo-create-modal-create-button {
-    background-color: #8DDBE0;
+    background-color: var(--primary-color);
 }
 
 #todo-create-modal-form {

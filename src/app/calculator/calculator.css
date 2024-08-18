@@ -44,7 +44,7 @@
 }
 
 .overallGrade {
-  background-color: #9bc4bc;
+  background-color: var(--secondary-color);
   margin-top: 3%;
   height: 55px;
   display: flex;

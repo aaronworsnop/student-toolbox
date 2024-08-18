@@ -1,6 +1,12 @@
+:root {
+    --background: #E5ECED;
+    --primary-color: #8DDBE0;
+    --secondary-color: #9bc4bc;
+}
+
 body {
     font-family: 'Poppins', sans-serif, 'Verdana', 'Arial';
-    background-color: #E5ECED;
+    background-color: var(--background);
 }
 
 input {
