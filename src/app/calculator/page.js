@@ -24,7 +24,7 @@ export default function CalculatorPage() {
   const handleNewCourse = () => {
     setCourses([...courses, { id: crypto.getRandomValues(array), courseName }]);
     setCourseName("");
-    document.getElementById("courseInput").value = "";
+    document.getElementById("course-input").value = "";
     setIsInputNameEmpty(true);
   };
 
@@ -81,7 +81,7 @@ export default function CalculatorPage() {
         ></CalculatorHeader>
       </div>
 
-      <div className="overallGrade">Current GPA:{gpa}/9</div>
+      <div className="overall-grade">Current GPA:{gpa}/9</div>
 
       <CourseList
         courses={courses}

@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 export default function CalculatorHeader(props) {
   return (
     <div className="header">
-      <div className="createCourse">
-        <input id="courseInput"
+      <div className="create-course">
+        <input id="course-input"
           placeholder="Enter Course Name"
           onChange={props.onNewCourseInput}
           onKeyDown={(e) => {

@@ -1,4 +1,4 @@
-.courseInfo {
+.course-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,21 +13,19 @@
     border: none;
 }
 
-
-.courseInfo>div {
+.course-info>div {
     display: flex;
     align-items: center;
 }
 
-.courseInfo>div>* {
+.course-info>div>* {
     margin: 5px;
     background-color: rgb(103, 103, 103, 0.33);
     padding: 3px;
     border-radius: 5px;
 }
 
-
-.gradeSummary button {
+.grade-summary button {
     background: none;
     border: none;
     color: inherit;
@@ -38,7 +36,7 @@
     align-items: center;
 }
 
-.courseAssignmentsShow {
+.course-assignments-show {
     margin: auto;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -52,7 +50,7 @@
     transition: all .5s;
 }
 
-.courseAssignmentsHide {
+.course-assignments-hide {
     margin: auto;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -62,15 +60,15 @@
     transition: all 0.5s;
 }
 
-.courseAssignmentsShow>* {
+.course-assignments-show>* {
     visibility: visible;
 }
 
-.courseAssignmentsHide>* {
+.course-assignments-hide>* {
     visibility: hidden;
 }
 
-.courseAssignmentsShow button {
+.course-assignments-show button {
     width: 100%;
     cursor: pointer;
     border-radius: 5px;
@@ -81,6 +79,6 @@
     visibility: visible;
 }
 
-.courseAssignmentsHide button {
+.course-assignments-hide button {
     visibility: hidden;
 }

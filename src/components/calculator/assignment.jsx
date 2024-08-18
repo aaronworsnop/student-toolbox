@@ -52,17 +52,17 @@ export default function Assignment(props) {
     return (
         <div className="assignment">
             <div>
-                <div className="assignmentName">
+                <div className="assignment-name">
                     Name:{""}
                     <button onClick={() => handleClick("name")}>
                         {handleChangingElement("name")}
                     </button>
                 </div>
             </div>
-            <div className="assignmentResults">
+            <div className="assignment-results">
                 <div>
                     Grade %:{""}
-                    <button className="finalGrade" onClick={() => handleClick("grade")} id="finalGrade">
+                    <button className="final-grade" onClick={() => handleClick("grade")} id="final-grade">
                         {handleChangingElement("grade")}
                     </button>
                 </div>
@@ -72,7 +72,7 @@ export default function Assignment(props) {
                         {handleChangingElement("weight")}
                     </button>
                 </div>
-                <button className="deleteAssignmentBtn" onClick={() => props.onDelete(props.id)}>x</button>
+                <button className="delete-assignment-btn" onClick={() => props.onDelete(props.id)}>x</button>
             </div>
         </div>
     )
