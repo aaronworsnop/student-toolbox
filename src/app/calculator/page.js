@@ -72,22 +72,22 @@ export default function CalculatorPage() {
 
   return (
     <main>
-      <Title text="GPA Calculator" />
-      <div>
+      <div id="calculator-bar">
+        <Title text="GPA Calculator" />
         <CalculatorHeader
           onNewCourseInput={handleNewCourseInput}
           onNewCourse={handleNewCourse}
           input={isInputNameEmpty}
         ></CalculatorHeader>
-
-        <div className="overallGrade">Current GPA:{gpa}/9</div>
-
-        <CourseList
-          courses={courses}
-          onCourseDelete={handleCourseDelete}
-          onAverageUpdate={handleAverageUpdate}
-        ></CourseList>
       </div>
+
+      <div className="overallGrade">Current GPA:{gpa}/9</div>
+
+      <CourseList
+        courses={courses}
+        onCourseDelete={handleCourseDelete}
+        onAverageUpdate={handleAverageUpdate}
+      ></CourseList>
     </main>
   );
 }
