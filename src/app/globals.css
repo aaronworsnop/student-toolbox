@@ -3,6 +3,10 @@ body {
     background-color: #E5ECED;
 }
 
+input {
+    font-family: inherit;
+}
+
 button {
     padding: 10px;
     border: none;
