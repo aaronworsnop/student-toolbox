@@ -13,7 +13,7 @@ import { nanoid } from "nanoid";
  * @param {Function} props.setEvents - Function to update the events list after creating a new event.
  * @returns {JSX.Element} The rendered component.
  */
-export default function EventModal({ setIsOpen, selectedInfo, setEvents }) {
+export default function TimetableEventModal({ setIsOpen, selectedInfo, setEvents }) {
   const session = useSession();
   // State to manage the event title and color
   const [title, setTitle] = useState("");
@@ -87,13 +87,13 @@ export default function EventModal({ setIsOpen, selectedInfo, setEvents }) {
 }
 
 // Define PropTypes for EventModal to enforce the types of props passed
-EventModal.propTypes = {
+TimetableEventModal.propTypes = {
   setIsOpen: PropTypes.func.isRequired,
   selectedInfo: PropTypes.object,
   setEvents: PropTypes.func.isRequired,
 };
 
 // Define default props if necessary
-EventModal.defaultProps = {
+TimetableEventModal.defaultProps = {
   selectedInfo: null,
 };

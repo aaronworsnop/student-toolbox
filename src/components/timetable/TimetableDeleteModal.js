@@ -13,7 +13,7 @@ import { useSession } from "next-auth/react";
  * @param {Function} props.setEvents - Function to update the events list after deletion.
  * @returns {JSX.Element|null} The rendered component or null if the modal is not open.
  */
-export default function DeleteModal({
+export default function TimetableDeleteModal({
   isOpen,
   setIsOpen,
   selectedEvent,
@@ -69,7 +69,7 @@ export default function DeleteModal({
 }
 
 // Define PropTypes for DeleteModal to enforce the types of props passed
-DeleteModal.propTypes = {
+TimetableDeleteModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   setIsOpen: PropTypes.func.isRequired,
   selectedEvent: PropTypes.object,
@@ -77,6 +77,6 @@ DeleteModal.propTypes = {
 };
 
 // Define default props if necessary
-DeleteModal.defaultProps = {
+TimetableDeleteModal.defaultProps = {
   selectedEvent: null,
 };

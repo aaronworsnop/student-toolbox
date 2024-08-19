@@ -6,8 +6,6 @@ import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import styles from "./css/style.module.scss";
-import EventModal from "./eventModal";
-import DeleteModal from "./deleteModal";
 
 /**
  * Calendar component for displaying and managing events.
@@ -16,7 +14,7 @@ import DeleteModal from "./deleteModal";
  * @param {string} props.username - The username of the user whose events are displayed.
  * @returns {JSX.Element} The rendered component.
  */
-export default function Calendar({ username }) {
+export default function Timetable({ username }) {
   // State variables for managing modals and events
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [deleteModalIsOpen, setDeleteModalIsOpen] = useState(false);
@@ -189,6 +187,6 @@ export default function Calendar({ username }) {
 }
 
 // Define propTypes for the component
-Calendar.propTypes = {
+Timetable.propTypes = {
   username: PropTypes.string.isRequired,
 };
