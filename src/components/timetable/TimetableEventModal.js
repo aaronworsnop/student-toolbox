@@ -64,8 +64,8 @@ export default function TimetableEventModal({ setIsOpen, selectedInfo, setEvents
   };
 
   return (
-    <div className={styles.modalOverlay}>
-      <div className={styles.modalContent}>
+    <div className={styles["modal-overlay"]}>
+      <div className={styles["modal-content"]}>
         <h2>Create New Event</h2>
         <input
           type="text"

@@ -119,24 +119,24 @@ export default function Timetable({ username }) {
   };
 
   return (
-    <div className={styles.calendar_main}>
+    <div className={styles["calendar-main"]}>
       {/* Button group for uploading and removing background image */}
-      <div className={styles.buttonGroup}>
+      <div className={styles["button-group"]}>
         <input
           type="file"
           accept="image/*"
           onChange={handleBackgroundImageUpload}
           style={{ display: "none" }}
-          id="backgroundImageUpload"
+          id="background-image-upload"
         />
-        <label htmlFor="backgroundImageUpload" className={styles.uploadButton}>
+        <label htmlFor="background-image-upload" className={styles["upload-button"]}>
           Upload Background Image
         </label>
 
         {backgroundImage && (
           <button
             onClick={handleRemoveBackgroundImage}
-            className={styles.removeButton}
+            className={styles["remove-button"]}
           >
             &times;
           </button>

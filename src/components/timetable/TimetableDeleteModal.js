@@ -54,8 +54,8 @@ export default function TimetableDeleteModal({
 
   return (
     isOpen && (
-      <div className={styles.modalOverlay}>
-        <div className={styles.modalContent}>
+      <div className={styles["modal-overlay"]}>
+        <div className={styles["modal-content"]}>
           <h2>Delete Event</h2>
           <p>
             Are you sure you want to delete the event '{selectedEvent?.title}'?
