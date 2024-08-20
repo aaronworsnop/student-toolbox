@@ -5,7 +5,9 @@ import PropTypes from "prop-types";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
-import styles from "./css/style.module.scss";
+import "./styles/timetable.css";
+import TimetableEventModal from "./TimetableEventModal";
+import TimetableDeleteModal from "./TimetableDeleteModal";
 
 /**
  * Calendar component for displaying and managing events.
@@ -119,9 +121,9 @@ export default function Timetable({ username }) {
   };
 
   return (
-    <div className={styles["calendar-main"]}>
+    <div className={"calendar-main"}>
       {/* Button group for uploading and removing background image */}
-      <div className={styles["button-group"]}>
+      <div className={"button-group"}>
         <input
           type="file"
           accept="image/*"
@@ -129,14 +131,11 @@ export default function Timetable({ username }) {
           style={{ display: "none" }}
           id="background-image-upload"
         />
-        <label htmlFor="background-image-upload" className={styles["upload-button"]}>
-          Upload Background Image
-        </label>
 
         {backgroundImage && (
           <button
             onClick={handleRemoveBackgroundImage}
-            className={styles["remove-button"]}
+            className={"remove-button"}
           >
             &times;
           </button>
@@ -165,7 +164,7 @@ export default function Timetable({ username }) {
 
       {/* Render EventModal if the modalIsOpen state is true */}
       {modalIsOpen && (
-        <EventModal
+        <TimetableEventModal
           isOpen={modalIsOpen}
           setIsOpen={setModalIsOpen}
           selectedInfo={selectedInfo}
@@ -175,7 +174,7 @@ export default function Timetable({ username }) {
 
       {/* Render DeleteModal if the deleteModalIsOpen state is true */}
       {deleteModalIsOpen && (
-        <DeleteModal
+        <TimetableDeleteModal
           isOpen={deleteModalIsOpen}
           setIsOpen={setDeleteModalIsOpen}
           selectedEvent={selectedEvent}

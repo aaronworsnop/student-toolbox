@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styles from "./css/style.module.scss";
+import "./styles/timetable.css";
 import { useSession } from "next-auth/react";
 import { nanoid } from "nanoid";
 
@@ -64,8 +64,8 @@ export default function TimetableEventModal({ setIsOpen, selectedInfo, setEvents
   };
 
   return (
-    <div className={styles["modal-overlay"]}>
-      <div className={styles["modal-content"]}>
+    <div className="modal-overlay">
+      <div className="modal-content">
         <h2>Create New Event</h2>
         <input
           type="text"

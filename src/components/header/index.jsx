@@ -1,25 +1,28 @@
-"use client"
+"use client";
 
-import { AnimatePresence } from "framer-motion"
-import { useState } from "react"
-import Nav from "./nav/index"
-import styles from "./style.module.scss"
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import Nav from "./nav/index";
+import "./header.css"; // Import the plain CSS file
 
 export default function Index() {
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <>
       <button
-        className={styles.button}
+        className="button" // Using a plain class name
         onClick={() => {
-          setIsActive(!isActive)
-        }}>
+          setIsActive(!isActive);
+        }}
+      >
         <div
-          className={`${styles.burger} ${isActive ? styles.burgerActive : ""
-            }`}></div>
+          className={`burger ${isActive ? "burgerActive" : ""}`}
+        ></div>
       </button>
-      <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {isActive && <Nav />}
+      </AnimatePresence>
     </>
-  )
+  );
 }

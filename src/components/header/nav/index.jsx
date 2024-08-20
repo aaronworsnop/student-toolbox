@@ -1,23 +1,20 @@
-import SignInButton from "@/components/auth/signin-button"
-import SignOutButton from "@/components/auth/signout-button"
-import { motion } from "framer-motion"
-import { useSession } from "next-auth/react"
-import { menuSlide } from "../anim"
-import Link from "./link/index"
-import styles from "./style.module.scss"
+import SignInButton from "@/components/auth/signin-button";
+import SignOutButton from "@/components/auth/signout-button";
+import { motion } from "framer-motion";
+import { useSession } from "next-auth/react";
+import { menuSlide } from "../anim";
+import Link from "./link/index";
+import "./headerNav.css";
 
 export default function Index() {
-  const session = useSession()
+  const session = useSession();
 
   const navItems = [
     { title: "Home", href: "/" },
     { title: "GPA Calculator", href: "/calculator" },
     { title: "To-Do List", href: "/todo" },
-    {
-      title: "Time Table Planner",
-      href: "/timetable",
-    },
-  ]
+    { title: "Time Table Planner", href: "/timetable" },
+  ];
 
   return (
     <motion.div
@@ -25,15 +22,16 @@ export default function Index() {
       animate="enter"
       exit="exit"
       initial="initial"
-      className={styles.menu}>
-      <div className={styles.body}>
-        <div className={styles.nav}>
-          <div className={styles.header}>
+      className="menu"  // Using plain class names
+    >
+      <div className="body">
+        <div className="nav">
+          <div className="header">
             <p>Put search bar here</p>
           </div>
-          {navItems.map((item, index) => {
-            return <Link key={item.href} data={{ ...item, index }} />
-          })}
+          {navItems.map((item, index) => (
+            <Link key={item.href} data={{ ...item, index }} />
+          ))}
           {session.status === "authenticated" ? (
             <SignOutButton />
           ) : (
@@ -42,5 +40,5 @@ export default function Index() {
         </div>
       </div>
     </motion.div>
-  )
+  );
 }

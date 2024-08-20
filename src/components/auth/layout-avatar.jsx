@@ -1,5 +1,5 @@
 import { auth } from "@/auth"
-import styles from "./auth.module.scss"
+import styles from "./styles/avatar.css"
 import Avatar from "./avatar"
 
 export default async function LayoutAvatar() {

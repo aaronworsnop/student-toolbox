@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./css/style.module.scss";
+import "./styles/timetable.css";
 import { useSession } from "next-auth/react";
 
 /**
@@ -54,8 +54,8 @@ export default function TimetableDeleteModal({
 
   return (
     isOpen && (
-      <div className={styles["modal-overlay"]}>
-        <div className={styles["modal-content"]}>
+      <div className="modal-overlay">
+        <div className="modal-content">
           <h2>Delete Event</h2>
           <p>
             Are you sure you want to delete the event '{selectedEvent?.title}'?
